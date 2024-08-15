@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Pacman</title>
+    <link rel="stylesheet" href="design/style.css" />
+
+    <script src="src/Data.js"></script>
+    <script src="src/Display.js"></script>
+    <script src="src/Food.js"></script>
+    <script src="src/Fruit.js"></script>
+    <script src="src/Blob.js"></script>
+    <script src="src/HighScores.js"></script>
+
+    <script src="src/game/Board.js"></script>
+    <script src="src/game/Canvas.js"></script>
+    <script src="src/game/BoardCanvas.js"></script>
+    <script src="src/game/GameCanvas.js"></script>
+
+    <script src="src/score/ScorePacMan.js"></script>
+    <script src="src/score/Score.js"></script>
+
+    <script src="src/characters/Ghosts.js"></script>
+    <!--
+    <script src="src/characters/Ghost.js"></script>-->
+    <script src="src/characters/ghosts/Blinky.js"></script>
+    <script src="src/characters/ghosts/Clyde.js"></script>
+    <script src="src/characters/ghosts/Inky.js"></script>
+    <script src="src/characters/ghosts/Pinky.js"></script>
+
+    <script src="src/animations/Animations.js"></script>
+    <script src="src/animations/Animation.js"></script>
+    <script src="src/animations/DeathAnimation.js"></script>
+    <script src="src/animations/EndLevelAnimation.js"></script>
+    <script src="src/animations/FruitScoreAnimation.js"></script>
+    <script src="src/animations/GameOverAnimation.js"></script>
+    <script src="src/animations/GhostScoreAnimation.js"></script>
+    <script src="src/animations/NewLevelAnimation.js"></script>
+    <script src="src/animations/PausedAnimation.js"></script>
+    <script src="src/animations/ReadyAnimation.js"></script>
+
+
+    <script src="src/demo/Demo.js">
+    </script>
+    <script src="src/demo/DemoData.js"></script>
+    <script src="src/demo/BigBlob.js"></script>
+    <script src="src/demo/DemoBlob.js"></script>
+    <script src="src/demo/DemoFood.js"></script>
+    <script src="src/demo/DemoGhost.js"></script>
+
+    <script src="src/Init.js"></script>
+
+    <script src="utils/Sounds.js"></script>
+    <script src="utils/Storage.js"></script>
+    <script src="utils/Utils.js"></script>
+</head>
+
+<body>
+    <div id="container" class="mainScreen">
+        <canvas class="board"></canvas>
+        <canvas class="game"></canvas>
+        <canvas class="screen"></canvas>
+
+        <div class="main display">
+            <ul>
+                <li><a href="#" data-action="play"><u>S</u>tart Game</a></li>
+                <li><a href="#" data-action="highScores"><u>H</u>igh Scores</a></li>
+                <li><a href="#" data-action="help"><u>C</u>ontrols</a></li>
+            </ul>
+            <div class="audio" data-action="sound">
+                <div class="waves">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="triangle"></div>
+                <div class="box"></div>
+            </div>
+        </div>
+
+        <div class="input display">
+            <h2>Game Over</h2>
+            <p>Your name:</p>
+            <input type="text" />
+            <a href="#" data-action="save">Ok</a>
+            <a class="restart" href="#" data-action="mainScreen"><u>N</u>ew Game</a>
+        </div>
+
+        <div class="high display">
+            <h2>High Scores</h2>
+            <div class="scores"></div>
+            <div class="none">No scores available</div>
+            <a class="restore" href="#" data-action="restore"><u>R</u>estore</a>
+            <a class="back" href="#" data-action="mainScreen"><u>B</u>ack</a>
+        </div>
+
+        <div class="controls display">
+            <h1>Controls</h1>
+            <ol>
+                <li><span>Use the arrows or WASD keys to move the blob.</span></li>
+                <li><span>Space or P will pause the game.</span></li>
+                <li><span>M will trigger the sound on or off.</span></li>
+                <li><span>Use the links or keys (underline letters) to navigate throught the screens.</span></li>
+            </ol>
+            <a href="#" data-action="mainScreen"><u>B</u>ack</a>
+        </div>
+    </div>
+</body>
+
+</html>
